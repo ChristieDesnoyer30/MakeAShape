@@ -23,6 +23,10 @@ public class Triangle implements ShapeMaker {
 
        public void dimensions(){
 
+            double area = base * height;
+
+            System.out.println("You created a triangle with "+ getBase() +  " as the base, and " + getHeight() + " as the height, the area is "+ area);
+
         }
 
 
