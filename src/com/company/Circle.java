@@ -34,8 +34,9 @@ public class Circle implements ShapeMaker {
 
         double diameter = (2 * radius);
         double circumference = (diameter * Math.PI);
+        
 
-        System.out.println("Creating a circle with the radius of " + getRadius() + " with a diameter of , " + diameter +
+        System.out.println("Creating a circle with the radius of " + getRadius() + ", with a diameter of  " + diameter +
                 " and a circumference of " + circumference + ".");
 
     }

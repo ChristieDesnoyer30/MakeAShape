@@ -10,6 +10,7 @@ public class Square implements ShapeMaker {
         return length;
     }
 
+
     public void setLength(double length) {
         this.length = length;
     }

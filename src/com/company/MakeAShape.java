@@ -28,6 +28,14 @@ public class MakeAShape {
         circ.dimensions();
 
 
+        Square square = new Square();
+        square.setLength(45);
+        square.dimensions();
+
+
+
+
+
 
     }
 }
