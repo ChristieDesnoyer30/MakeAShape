@@ -22,11 +22,16 @@ public class MakeAShape {
 
             case 1:
                 System.out.println("What is the base of the triangle?");
+
                 double triBase = scan.nextDouble();
+
                 tri.setBase(triBase);
+
                 System.out.println("What is the height of the triangle?");
+
                 double triHeight = scan.nextDouble();
-                tri.setHeight(triBase);
+
+                tri.setHeight(triHeight);
 
                 tri.dimensions();
 
