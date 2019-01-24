@@ -8,7 +8,7 @@ public class MakeAShape {
 
         Scanner scan = new Scanner(System.in);
 
-        System.out.println("What type of shape would you like to create?");
+        System.out.println("What type of shape would you like to create? \n 1. For triangle. 2. For Circle 3. For Square. ");
 
         Triangle tri = new Triangle();
 
