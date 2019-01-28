@@ -8,6 +8,8 @@ public class MakeAShape {
 
         Scanner scan = new Scanner(System.in);
 
+        int userOption;
+
         System.out.println("What type of shape would you like to create? \n 1. For triangle. 2. For Circle 3. For Square. ");
 
         Triangle tri = new Triangle();
@@ -16,20 +18,38 @@ public class MakeAShape {
 
         Square square = new Square();
 
-        int userOption = scan.nextInt();
+        //This is for
+        do {
+
+            System.out.print("Please enter your choice: ");
+
+
+            while (!scan.hasNextInt()) {
+
+                String input = scan.next();
+
+                System.out.printf("\"%s\" is not a valid number.\n", input);
+
+                System.out.print("Please enter your choice: ");
+            }
+
+           userOption = scan.nextInt();
+
+        } while (userOption < 0 || userOption > 3);
+
+
+
 
         switch(userOption){
 
             case 1:
-                System.out.println("What is the base of the triangle?");
 
-                double triBase = scan.nextDouble();
+                double triBase = validateDouble(scan, "What is the base of the triangle?" );
 
                 tri.setBase(triBase);
 
-                System.out.println("What is the height of the triangle?");
 
-                double triHeight = scan.nextDouble();
+                double triHeight = validateDouble(scan, "What is the height of the triangle");
 
                 tri.setHeight(triHeight);
 
@@ -38,33 +58,54 @@ public class MakeAShape {
                 break;
 
             case 2:
-                System.out.println("What is the radius of the circle?");
 
-                double circRadius = scan.nextDouble();
+                double circRadius = validateDouble(scan, "What is the radius of the circle?");
 
                 circ.setRadius(circRadius);
 
                 circ.dimensions();
+
                 break;
 
             case 3:
-                System.out.println("What is the length of the square?");
 
-                double squareLength = scan.nextDouble();
+
+                double squareLength = validateDouble(scan, "What is the length of the square?");
 
                 square.setLength(squareLength);
 
                 square.dimensions();
 
-
         }
 
 
+        System.out.println( "Thank you for using the shape calculator! ");
 
 
 
+    }
 
 
+    //this method will validate if what the user enters is a double or not
+    // to prevent people from typing in strings etc.
+    public static double validateDouble(Scanner sc, String prompt) {
+        double d = 0;
+        boolean isValid = false;
+        while (isValid == false) {
+            System.out.print(prompt);
+            if (sc.hasNextDouble()) {
+                d = sc.nextDouble();
 
+                isValid = true;
+
+            } else {
+
+                System.out.println("Error! Invalid decimal value. Try again.");
+
+                sc.next();
+            }
+
+        }
+        return d;
     }
 }

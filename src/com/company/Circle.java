@@ -33,6 +33,7 @@ public class Circle implements ShapeMaker {
     public void dimensions(){
 
         double diameter = (2 * radius);
+
         double circumference = (diameter * Math.PI);
 
 

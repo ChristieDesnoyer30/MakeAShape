@@ -20,7 +20,7 @@ public class Square implements ShapeMaker {
 
         double area = Math.pow(length, 2);
 
-        System.out.println("Creating a  square with "+ getLength() +  " for all four sides, the area is "+ area);
+        System.out.println("Creating a square with "+ getLength() +  " for all four sides, the area is "+ area);
 
 
 

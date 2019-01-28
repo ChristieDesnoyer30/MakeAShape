@@ -3,6 +3,7 @@ package com.company;
 public class Triangle implements ShapeMaker {
 
     private double base;
+
     private double height;
 
     public double getBase() {
