@@ -10,7 +10,8 @@ public class MakeAShape {
 
         int userOption;
 
-        System.out.println("What type of shape would you like to create? \n 1. For triangle. 2. For Circle 3. For Square. ");
+        System.out.println("What type of shape would you like to create?" +
+                " \n 1. For triangle. 2. For Circle 3. For Square. ");
 
         Triangle tri = new Triangle();
 
@@ -48,7 +49,6 @@ public class MakeAShape {
 
                 tri.setBase(triBase);
 
-
                 double triHeight = validateDouble(scan, "What is the height of the triangle");
 
                 tri.setHeight(triHeight);
@@ -75,6 +75,12 @@ public class MakeAShape {
                 square.setLength(squareLength);
 
                 square.dimensions();
+
+                break;
+
+            default:
+
+                System.out.println("Not a valid option");
 
         }
 
